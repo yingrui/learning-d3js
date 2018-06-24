@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learning d3.js</title>
+    <script src="./d3.js" charset="utf-8"></script>
+    <style>
+
+        .node circle {
+            fill: #999;
+        }
+
+        .node text {
+            font: 10px sans-serif;
+        }
+
+        .node--internal circle {
+            fill: #555;
+        }
+
+        .node--internal text {
+            text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
+        }
+
+        .link {
+            fill: none;
+            stroke: #555;
+            stroke-opacity: 0.4;
+            stroke-width: 1.5px;
+        }
+
+        form {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            position: absolute;
+            left: 10px;
+            top: 10px;
+        }
+
+        label {
+            display: block;
+        }
+
+    </style>
+</head>
+<body style="margin: 0px">
+<form>
+    <label><input type="radio" name="mode" value="cluster" checked> Dendrogram</label>
+    <label><input type="radio" name="mode" value="tree"> Tree</label>
+</form>
+<svg id="tree" width="960" height="2400"></svg>
+</body>
+<script type="application/javascript" src="tree.js"></script>
+</html>
