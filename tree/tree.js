@@ -23,6 +23,7 @@ d3.csv("flare.csv", function (error, data) {
             return (a.height - b.height) || a.id.localeCompare(b.id);
         });
 
+    console.log(root)
 
     cluster(root);
 
@@ -43,7 +44,7 @@ d3.csv("flare.csv", function (error, data) {
         });
 
     node.append("circle")
-        .attr("r", 2.5);
+        .attr("r", 10);
 
     node.append("text")
         .attr("dy", 3)
